@@ -18,6 +18,6 @@ documents = SimpleWebPageReader(html_to_text=True).load_data(
 index = SummaryIndex.from_documents(documents)
 
 # Chat with the data
-chat_engine = index.as_chat_engine()
-response = chat_engine.chat("Who's name appear on the list the most?")
+query_engine = index.as_query_engine()
+response = query_engine.query("Who's name appear on the list the most?")
 print(response)

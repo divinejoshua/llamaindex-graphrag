@@ -23,6 +23,6 @@ storage_context = StorageContext.from_defaults(persist_dir=storage_dir)
 index = load_index_from_storage(storage_context)
 
 # Chat with the data
-chat_engine = index.as_chat_engine()
-response = chat_engine.chat("Who's name appear on the list the most?")
+query_engine = index.as_query_engine()
+response = query_engine.query("Who's name appear on the list the most?")
 print(response)
